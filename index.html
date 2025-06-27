@@ -67,7 +67,10 @@
 
   <!-- Navigation -->
 <nav class="bg-blue-800 sticky top-0 z-20 shadow-lg">
-  <div class="max-w-4xl mx-auto px-4 py-3 flex justify-center space-x-8 whitespace-nowrap font-poppins" style="font-family: 'Poppins', sans-serif;">
+  <div
+    class="max-w-4xl mx-auto px-4 py-3 flex space-x-10 whitespace-nowrap overflow-x-auto scrollbar-hide font-poppins"
+    style="font-family: 'Poppins', sans-serif;"
+  >
     <a href="#about" class="text-white font-semibold hover:text-green-400 transition duration-300">
       👋 About Me
     </a>
@@ -94,6 +97,17 @@
     </a>
   </div>
 </nav>
+
+<style>
+  /* Hide scrollbar for WebKit browsers */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>
 
   <!-- Timeline Section -->
   <aside class="max-w-4xl mx-auto px-4 mt-6">
