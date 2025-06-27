@@ -11,8 +11,8 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
     }
+    /* Fade-in animation */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -22,7 +22,7 @@
       opacity: 1;
       transform: translateY(0);
     }
-    /* Timeline styles */
+    /* Timeline sidebar styles */
     .timeline {
       position: fixed;
       top: 150px;
@@ -64,18 +64,21 @@
     .timeline-item:last-child::after {
       display: none;
     }
-    /* Responsive timeline */
+    /* Responsive timeline: static below content on small screens */
     @media (max-width: 1024px) {
       .timeline {
         position: static;
         width: 100%;
         margin: 1rem auto;
         max-height: none;
+        box-shadow: none;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
       }
     }
-    /* Scroll margin to offset sticky nav */
+    /* Scroll offset so sections don't hide behind fixed nav */
     section {
-      scroll-margin-top: 4.5rem; /* about 72px, adjust if nav height changes */
+      scroll-margin-top: 70px; /* Adjust according to navbar height */
     }
   </style>
 </head>
@@ -93,7 +96,7 @@
     </div>
   </header>
 
-  <!-- Navigation with Hamburger -->
+  <!-- Mobile Menu Toggle & Navigation -->
   <nav class="bg-blue-800 text-white sticky top-0 z-10 shadow-lg">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between py-4">
       <button id="menu-toggle" class="lg:hidden text-white focus:outline-none" aria-label="Toggle menu">
@@ -116,7 +119,7 @@
     </div>
   </nav>
 
-  <!-- Timeline Sidebar -->
+  <!-- Timeline -->
   <aside class="timeline fade-in">
     <h2 class="text-xl font-bold mb-4 text-blue-800">My Journey</h2>
     <div class="timeline-item">
@@ -149,119 +152,116 @@
     </div>
   </aside>
 
-  <!-- Main content -->
-  <main class="max-w-4xl mx-auto px-4">
-    <!-- About Me -->
-    <section id="about" class="fade-in bg-white rounded-lg shadow-md p-6 mt-6">
-      <h2 class="text-3xl font-bold mb-4 text-blue-800">About Me</h2>
-      <p class="text-gray-600 leading-relaxed">
-        I am Kayden Chow, a dedicated student at Tampines Secondary School in Singapore, currently in Class 4E3. I am passionate about contributing to my school and community through various initiatives, leadership roles, and co-curricular activities. With over 70 hours of Values in Action (VIA) projects, I have developed a strong sense of responsibility, teamwork, and empathy. My experiences have shaped me into a more confident and outgoing individual, ready to take on new challenges.
-      </p>
-    </section>
+  <!-- About Section -->
+  <section id="about" class="section fade-in bg-white rounded-lg shadow-md p-6 max-w-4xl mx-auto mt-10">
+    <h2 class="text-3xl font-bold mb-4 text-blue-800">About Me</h2>
+    <p class="text-gray-600 leading-relaxed">
+      I am Kayden Chow, a dedicated student at Tampines Secondary School in Singapore, currently in Class 4E3. I am passionate about contributing to my school and community through various initiatives, leadership roles, and co-curricular activities. With over 70 hours of Values in Action (VIA) projects, I have developed a strong sense of responsibility, teamwork, and empathy. My experiences have shaped me into a more confident and outgoing individual, ready to take on new challenges.
+    </p>
+  </section>
 
-    <!-- VIA Projects -->
-    <section id="via" class="fade-in bg-white rounded-lg shadow-md p-6 mt-6">
-      <h2 class="text-3xl font-bold mb-4 text-blue-800">Values in Action (VIA) Projects</h2>
-      <p class="text-gray-600 leading-relaxed">
-        I have accumulated over 70 hours of VIA projects through my co-curricular activities and class initiatives. One of my most rewarding experiences was visiting the NTUC Nursing Home, where I spent time with the elderly, engaging in conversations and activities to brighten their day. These interactions taught me the importance of empathy and active listening, leaving a lasting impact on my perspective toward community service.
-      </p>
-      <p class="text-gray-600 leading-relaxed mt-4">
-        Additionally, I represented Tampines Secondary School twice in "Our Schools, Our Stories," a local event involving multiple schools. This platform allowed me to showcase my school's values and connect with students from diverse backgrounds, further enriching my understanding of collaboration and community engagement.
-      </p>
-    </section>
+  <!-- VIA Projects Section -->
+  <section id="via" class="section fade-in bg-white rounded-lg shadow-md p-6 max-w-4xl mx-auto mt-6">
+    <h2 class="text-3xl font-bold mb-4 text-blue-800">Values in Action (VIA) Projects</h2>
+    <p class="text-gray-600 leading-relaxed">
+      I have accumulated over 70 hours of VIA projects through my co-curricular activities and class initiatives. One of my most rewarding experiences was visiting the NTUC Nursing Home, where I spent time with the elderly, engaging in conversations and activities to brighten their day. These interactions taught me the importance of empathy and active listening, leaving a lasting impact on my perspective toward community service.
+    </p>
+    <p class="text-gray-600 leading-relaxed mt-4">
+      Additionally, I represented Tampines Secondary School twice in "Our Schools, Our Stories," a local event involving multiple schools. This platform allowed me to showcase my school's values and connect with students from diverse backgrounds, further enriching my understanding of collaboration and community engagement.
+    </p>
+  </section>
 
-    <!-- CCA -->
-    <section id="cca" class="fade-in bg-white rounded-lg shadow-md p-6 mt-6">
-      <h2 class="text-3xl font-bold mb-4 text-blue-800">Co-Curricular Activities (CCA)</h2>
-      <p class="text-gray-600 leading-relaxed">
-        As part of my CCA, I play a key role in backstage coordination for school events, including concerts and cultural celebrations such as Chinese New Year, Hari Raya, and Deepavali. My responsibilities include rehearsing after school and ensuring smooth execution of all movements during these events. This role has honed my organizational skills and ability to work under pressure.
-      </p>
-      <p class="text-gray-600 leading-relaxed mt-4">
-        I also participated in Outward Bound Singapore, an event that broadened my perspective through interactions with students from other schools. This experience enhanced my teamwork and social skills, teaching me how to collaborate effectively in diverse groups.
-      </p>
-      <p class="text-gray-600 leading-relaxed mt-4">
-        Furthermore, I competed in two inter-class football games, which were televised on the school's YouTube channel. Although my team did not win, the experience strengthened my resilience and teamwork, as we worked together to strive for success.
-      </p>
-    </section>
+  <!-- CCA Section -->
+  <section id="cca" class="section fade-in bg-white rounded-lg shadow-md p-6 max-w-4xl mx-auto mt-6">
+    <h2 class="text-3xl font-bold mb-4 text-blue-800">Co-Curricular Activities (CCA)</h2>
+    <p class="text-gray-600 leading-relaxed">
+      As part of my CCA, I play a key role in backstage coordination for school events, including concerts and cultural celebrations such as Chinese New Year, Hari Raya, and Deepavali. My responsibilities include rehearsing after school and ensuring smooth execution of all movements during these events. This role has honed my organizational skills and ability to work under pressure.
+    </p>
+    <p class="text-gray-600 leading-relaxed mt-4">
+      I also participated in Outward Bound Singapore, an event that broadened my perspective through interactions with students from other schools. This experience enhanced my teamwork and social skills, teaching me how to collaborate effectively in diverse groups.
+    </p>
+    <p class="text-gray-600 leading-relaxed mt-4">
+      Furthermore, I competed in two inter-class football games, which were televised on the school's YouTube channel. Although my team did not win, the experience strengthened my resilience and teamwork, as we worked together to strive for success.
+    </p>
+  </section>
 
-    <!-- Leadership -->
-    <section id="leadership" class="fade-in bg-white rounded-lg shadow-md p-6 mt-6">
-      <h2 class="text-3xl font-bold mb-4 text-blue-800">Leadership Roles</h2>
-      <p class="text-gray-600 leading-relaxed">
-        For two years, I served as a Peer Support Leader in Class 4E3, working alongside two other leaders to conduct weekly briefings and present our class's peer support project to the entire school. This role required me to engage with my peers on topics such as mental health, offering support and encouragement. Presenting on stage and leading discussions helped me become more open, outgoing, and confident in public speaking.
-      </p>
-    </section>
+  <!-- Leadership Section -->
+  <section id="leadership" class="section fade-in bg-white rounded-lg shadow-md p-6 max-w-4xl mx-auto mt-6">
+    <h2 class="text-3xl font-bold mb-4 text-blue-800">Leadership Roles</h2>
+    <p class="text-gray-600 leading-relaxed">
+      For two years, I served as a Peer Support Leader in Class 4E3, working alongside two other leaders to conduct weekly briefings and present our class's peer support project to the entire school. This role required me to engage with my peers on topics such as mental health, offering support and encouragement. Presenting on stage and leading discussions helped me become more open, outgoing, and confident in public speaking.
+    </p>
+  </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="fade-in bg-white rounded-lg shadow-md p-6 mt-6">
-      <h2 class="text-3xl font-bold mb-4 text-blue-800">Teacher Testimonials</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="border-l-4 border-green-500 pl-4">
-          <p class="text-gray-600 italic">
-            "Kayden has shown remarkable leadership and empathy in his role as a Peer Support Leader." - Teacher Name
-          </p>
-          <div class="mt-4">
-            <a href="https://via.placeholder.com/150" class="text-blue-600 hover:text-blue-800">View Testimonial Image</a>
-          </div>
-        </div>
-        <div class="border-l-4 border-orange-500 pl-4">
-          <p class="text-gray-600 italic">
-            "Kayden's dedication to community service is truly inspiring." - Teacher Name
-          </p>
-          <div class="mt-4">
-            <a href="https://via.placeholder.com/150" class="text-blue-600 hover:text-blue-800">View Testimonial Image</a>
-          </div>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section fade-in bg-white rounded-lg shadow-md p-6 max-w-4xl mx-auto mt-6">
+    <h2 class="text-3xl font-bold mb-4 text-blue-800">Teacher Testimonials</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="border-l-4 border-green-500 pl-4">
+        <p class="text-gray-600 italic">
+          "Kayden has shown remarkable leadership and empathy in his role as a Peer Support Leader." - Teacher Name
+        </p>
+        <div class="mt-4">
+          <a href="https://via.placeholder.com/150" class="text-blue-600 hover:text-blue-800">View Testimonial Image</a>
         </div>
       </div>
-    </section>
-
-    <!-- Certificate -->
-    <section id="certificate" class="fade-in bg-white rounded-lg shadow-md p-6 mt-6">
-      <h2 class="text-3xl font-bold mb-4 text-blue-800">Certificate of Accomplishment</h2>
-      <p class="text-gray-600 leading-relaxed">
-        I completed the Applied Design Thinking course at Temasek Polytechnic, earning a Certificate of Accomplishment.
-      </p>
-      <div class="mt-4">
-        <a href="https://example.com/2025_certificate.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">
-          View Certificate
-        </a>
+      <div class="border-l-4 border-orange-500 pl-4">
+        <p class="text-gray-600 italic">
+          "Kayden's dedication to community service is truly inspiring." - Teacher Name
+        </p>
+        <div class="mt-4">
+          <a href="https://via.placeholder.com/150" class="text-blue-600 hover:text-blue-800">View Testimonial Image</a>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Course Write-Up -->
-    <section id="course-writeup" class="fade-in bg-white rounded-lg shadow-md p-6 mt-6">
-      <h2 class="text-3xl font-bold mb-4 text-blue-800">Applied Design Thinking Course Write-Up</h2>
-      <p class="text-gray-600 leading-relaxed">
-        During the holidays, I participated in a 2-day Applied Design Thinking course at Temasek Polytechnic, an enriching experience that allowed me to collaborate with both familiar friends and students from other classes I had not previously interacted with. The course provided a platform to share my thoughts openly, give and receive constructive feedback, and engage in creative problem-solving. Through group activities, I honed my communication skills, learning how to efficiently coordinate with teammates to complete tasks. The culminating project required us to present our findings and design solutions, which strengthened my ability to articulate ideas clearly and work effectively in a team. This course not only enhanced my collaborative and creative skills but also boosted my confidence in contributing to group discussions and projects.
-      </p>
-    </section>
+  <!-- Certificate Section -->
+  <section id="certificate" class="section fade-in bg-white rounded-lg shadow-md p-6 max-w-4xl mx-auto mt-6">
+    <h2 class="text-3xl font-bold mb-4 text-blue-800">Certificate of Accomplishment</h2>
+    <p class="text-gray-600 leading-relaxed">
+      I completed the Applied Design Thinking course at Temasek Polytechnic, earning a Certificate of Accomplishment.
+    </p>
+    <div class="mt-4">
+      <a href="file:///C:/Users/chowk/Downloads/2025_ApLMTPMD012_CHOW+WEI+KUAN,+KAYDEN.pdf" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">View Certificate</a>
+    </div>
+  </section>
 
-    <!-- Reflection -->
-    <section id="writeup" class="fade-in bg-white rounded-lg shadow-md p-6 mt-6 mb-12">
-      <h2 class="text-3xl font-bold mb-4 text-blue-800">Reflection</h2>
-      <p class="text-gray-600 leading-relaxed">
-        "My journey at Tampines Secondary School has been transformative, shaped by a myriad of experiences that have molded me into a more empathetic, resilient, and confident individual. Being a peer support leader, the drive to help others as well as doing my best to serve them has been engrained in every thought process in which I have. I believe that these traits would help me in joining polytechnic courses as it would act as the perfect catalyst to further nurture traits in which would be desirable."
-      </p>
-    </section>
-  </main>
+  <!-- Course Write-Up Section -->
+  <section id="course-writeup" class="section fade-in bg-white rounded-lg shadow-md p-6 max-w-4xl mx-auto mt-6">
+    <h2 class="text-3xl font-bold mb-4 text-blue-800">Applied Design Thinking Course Write-Up</h2>
+    <p class="text-gray-600 leading-relaxed">
+      During the holidays, I participated in a 2-day Applied Design Thinking course at Temasek Polytechnic, an enriching experience that allowed me to collaborate with both familiar friends and students from other classes I had not previously interacted with. The course provided a platform to share my thoughts openly, give and receive constructive feedback, and engage in creative problem-solving. Through group activities, I honed my communication skills, learning how to efficiently coordinate with teammates to complete tasks. The culminating project required us to present our findings and design solutions, which strengthened my ability to articulate ideas clearly and work effectively in a team. This course not only enhanced my collaborative and creative skills but also boosted my confidence in contributing to group discussions and projects.
+    </p>
+  </section>
+
+  <!-- Reflection Section -->
+  <section id="writeup" class="section fade-in bg-white rounded-lg shadow-md p-6 max-w-4xl mx-auto mt-6 mb-12">
+    <h2 class="text-3xl font-bold mb-4 text-blue-800">Reflection</h2>
+    <p class="text-gray-600 leading-relaxed">
+      "My journey at Tampines Secondary School has been transformative, shaped by a myriad of experiences that have molded me into a more empathetic, resilient, and confident individual. Being a peer support leader, the drive to help others as well as doing my best to serve them has been engrained in every thought process in which I have. I believe that these traits would help me in joining polytechnic courses as it would act as the perfect catalyst to further nurture traits in which would be desirable."
+    </p>
+  </section>
 
   <!-- Footer -->
-  <footer class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-8 mt-8">
+  <footer class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-8">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <p class="text-lg">© 2025 Kayden Chow. All rights reserved.</p>
-      <p class="text-lg">Best view using Desktop</p>
+      <p class="text-lg">Best viewed using Desktop</p>
     </div>
   </footer>
 
   <!-- JavaScript for menu toggle and fade-in -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Toggle mobile menu
       const menuToggle = document.getElementById('menu-toggle');
       const menu = document.getElementById('menu');
       menuToggle.addEventListener('click', () => {
         menu.classList.toggle('hidden');
       });
 
+      // Fade-in sections when scrolling
       const sections = document.querySelectorAll('.fade-in');
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
