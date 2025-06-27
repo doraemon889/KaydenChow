@@ -24,11 +24,17 @@
     section {
       scroll-margin-top: 120px;
     }
-    .timeline {
-      background: white;
-      border-radius: 0.5rem;
-      padding: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  .timeline {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    overflow-anchor: none;
     }
     .timeline-item::before {
       content: '';
@@ -53,6 +59,13 @@
     .timeline-item:last-child::after {
       display: none;
     }
+     @media (max-width: 1024px) {
+      .timeline {
+        position: relative;
+        top: auto;
+        max-height: none;
+        overflow-y: visible;
+      }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
 </head>
