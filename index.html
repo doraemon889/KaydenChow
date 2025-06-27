@@ -43,19 +43,20 @@
   top: 0;
   width: 12px;
   height: 12px;
-  background: #3b82f6;  /* Currently blue */
+  background: #f97316; /* orange dot */
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid #fff; /* white border */
 }
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      left: 5px;
-      top: 12px;
-      bottom: -1.5rem;
-      width: 2px;
-      background: #3b82f6;
-    }
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 12px;
+  bottom: -1.5rem;
+  width: 2px;
+  background: #3b82f6; /* blue line */
+}
     .timeline-item:last-child::after {
       display: none;
     }
