@@ -66,22 +66,15 @@
 
   <!-- Navigation -->
   <nav class="bg-blue-800 text-white sticky top-0 z-10 shadow-lg">
-    <div class="max-w-4xl mx-auto px-4 flex justify-between items-center py-4">
-      <button id="menu-toggle" class="lg:hidden text-white focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-      <div id="menu" class="hidden lg:flex flex-wrap gap-4">
-        <a href="#about" class="hover:text-green-300">About Me</a>
-        <a href="#via" class="hover:text-green-300">VIA Projects</a>
-        <a href="#cca" class="hover:text-green-300">CCA</a>
-        <a href="#leadership" class="hover:text-green-300">Leadership</a>
-        <a href="#testimonials" class="hover:text-green-300">Testimonials</a>
-        <a href="#certificate" class="hover:text-green-300">Certificate</a>
-        <a href="#course-writeup" class="hover:text-green-300">Course Write-Up</a>
-        <a href="#writeup" class="hover:text-green-300">Reflection</a>
-      </div>
+    <div class="max-w-4xl mx-auto px-4 py-4 flex flex-wrap gap-4 justify-center">
+      <a href="#about" class="hover:text-green-300">About Me</a>
+      <a href="#via" class="hover:text-green-300">VIA Projects</a>
+      <a href="#cca" class="hover:text-green-300">CCA</a>
+      <a href="#leadership" class="hover:text-green-300">Leadership</a>
+      <a href="#testimonials" class="hover:text-green-300">Testimonials</a>
+      <a href="#certificate" class="hover:text-green-300">Certificate</a>
+      <a href="#course-writeup" class="hover:text-green-300">Course Write-Up</a>
+      <a href="#writeup" class="hover:text-green-300">Reflection</a>
     </div>
   </nav>
 
@@ -130,16 +123,45 @@
         I am Kayden Chow, a dedicated student at Tampines Secondary School in Singapore, currently in Class 4E3. I am passionate about contributing to my school and community through various initiatives, leadership roles, and co-curricular activities...
       </p>
     </section>
-    <!-- ... Other sections continue ... -->
+
+    <section id="via" class="fade-in bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">Values in Action (VIA) Projects</h2>
+      <p class="text-gray-700 leading-relaxed">I have accumulated over 70 hours of VIA projects through my co-curricular activities...</p>
+    </section>
+
+    <section id="cca" class="fade-in bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">Co-Curricular Activities (CCA)</h2>
+      <p class="text-gray-700 leading-relaxed">As part of my CCA, I play a key role in backstage coordination for school events...</p>
+    </section>
+
+    <section id="leadership" class="fade-in bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">Leadership Roles</h2>
+      <p class="text-gray-700 leading-relaxed">For two years, I served as a Peer Support Leader in Class 4E3...</p>
+    </section>
+
+    <section id="testimonials" class="fade-in bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">Teacher Testimonials</h2>
+      <p class="text-gray-700 leading-relaxed italic">"Kayden has shown remarkable leadership and empathy in his role as a Peer Support Leader."</p>
+    </section>
+
+    <section id="certificate" class="fade-in bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">Certificate of Accomplishment</h2>
+      <p class="text-gray-700 leading-relaxed">I completed the Applied Design Thinking course at Temasek Polytechnic...</p>
+    </section>
+
+    <section id="course-writeup" class="fade-in bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">Applied Design Thinking Course Write-Up</h2>
+      <p class="text-gray-700 leading-relaxed">During the holidays, I participated in a 2-day Applied Design Thinking course at Temasek Polytechnic...</p>
+    </section>
+
+    <section id="writeup" class="fade-in bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">Reflection</h2>
+      <p class="text-gray-700 leading-relaxed">"My journey at Tampines Secondary School has been transformative...</p>
+    </section>
   </main>
 
-  <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('menu-toggle').addEventListener('click', () => {
-        document.getElementById('menu').classList.toggle('hidden');
-      });
-
       const sections = document.querySelectorAll('.fade-in');
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
