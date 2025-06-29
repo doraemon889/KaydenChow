@@ -100,27 +100,51 @@
   animation: fade-in-up 1s ease-out forwards;
 }
 </style>
-
+<style>
+.parallax-header {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+@media (max-width: 768px) {
+  .parallax-header {
+    background-attachment: scroll;
+  }
+}
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+}
+</style>
   
 </head>
 <body>
- <!-- Header -->
-<header class="text-white py-24 bg-cover bg-center relative" style="background-image: url('https://raw.githubusercontent.com/doraemon889/KaydenChow/main/Kayden13.png');">
+<!-- Header -->
+  <header class="text-white py-36 sm:py-48 bg-center bg-no-repeat bg-cover relative parallax-header"
+        style="background-image: url('https://raw.githubusercontent.com/doraemon889/KaydenChow/main/Kayden13.png');">
 
-  <!-- 🔥 Updated: Frosted glass effect with backdrop blur -->
-  <div class="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm"></div>
+  <!-- Stronger dark overlay for text contrast -->
+  <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm sm:bg-opacity-30"></div>
 
   <div class="relative max-w-4xl mx-auto px-4 text-center">
-    <!-- 🔥 Updated: Gradient text, shadow, and animation -->
-    <h1 class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-300 to-purple-500 bg-clip-text text-transparent drop-shadow-lg animate-fade-in-up">
+    <h1 class="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-yellow-300 to-purple-500 bg-clip-text text-transparent drop-shadow-lg animate-fade-in-up">
       Kayden Chow Wei Kuan
     </h1>
 
-    <!-- 🔥 Added: Subheading -->
-    <p class="mt-4 text-xl sm:text-2xl text-white font-light">Aspiring Technologist | Leader | Creator</p>
+    <p class="mt-3 text-lg sm:text-2xl text-white font-light">
+      Aspiring Technologist | Leader | Creator
+    </p>
 
-    <!-- 🔥 Added: Scroll-down CTA button -->
-    <a href="#about" class="mt-6 inline-block bg-white text-blue-700 font-semibold py-2 px-4 rounded-full shadow hover:bg-blue-100 transition">
+    <a href="#about" class="mt-5 sm:mt-6 inline-block bg-white text-blue-700 font-semibold py-2 px-6 sm:px-8 rounded-full shadow hover:bg-blue-100 transition">
       Learn More About Me ↓
     </a>
   </div>
