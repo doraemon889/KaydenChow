@@ -73,13 +73,13 @@
         overflow-y: visible;
       }
     }
-    .scrollbar-hide::-webkit-scrollbar {
-      display: none;
-    }
-    .scrollbar-hide {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
     .parallax-header {
       background-attachment: fixed;
       background-size: cover;
@@ -122,18 +122,20 @@
   </header>
 
   <!-- Navigation -->
-  <nav class="bg-blue-800 sticky top-0 z-20 shadow-lg text-white font-[Poppins]">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-center flex-wrap gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide">
-      <a href="#about" class="font-semibold hover:text-yellow-300 transition">👋 About Me</a>
-      <a href="#via" class="font-semibold hover:text-yellow-300 transition">🤝 VIA Proj</a>
-      <a href="#cca" class="font-semibold hover:text-yellow-300 transition">🎭 CCA</a>
-      <a href="#leadership" class="font-semibold hover:text-yellow-300 transition">⭐ Leadership</a>
-      <a href="#testimonials" class="font-semibold hover:text-yellow-300 transition">💬 Testimonials</a>
-      <a href="#certificate" class="font-semibold hover:text-yellow-300 transition">🎓 Certificates</a>
-      <a href="#course-writeup" class="font-semibold hover:text-yellow-300 transition">📝 Course Write-Up</a>
-      <a href="#coding-project" class="font-semibold hover:text-yellow-300 transition">📝 My Coding Proj</a>
-      <a href="#writeup" class="font-semibold hover:text-yellow-300 transition">🧠 Reflections</a>
+<nav class="bg-blue-800 sticky top-0 z-20 shadow-lg text-white font-[Poppins]">
+  <div class="max-w-7xl mx-auto px-4 py-3">
+    <div class="flex space-x-4 overflow-x-auto scrollbar-hide whitespace-nowrap justify-center lg:justify-center">
+      <a href="#about" class="font-semibold hover:text-yellow-300 transition duration-300">👋 About Me</a>
+      <a href="#via" class="font-semibold hover:text-yellow-300 transition duration-300">🤝 VIA Proj</a>
+      <a href="#cca" class="font-semibold hover:text-yellow-300 transition duration-300">🎭 CCA</a>
+      <a href="#leadership" class="font-semibold hover:text-yellow-300 transition duration-300">⭐ Leadership</a>
+      <a href="#testimonials" class="font-semibold hover:text-yellow-300 transition duration-300">💬 Testimonials</a>
+      <a href="#certificate" class="font-semibold hover:text-yellow-300 transition duration-300">🎓 Certificates</a>
+      <a href="#course-writeup" class="font-semibold hover:text-yellow-300 transition duration-300">📝 Course Write-Up</a>
+      <a href="#coding-project" class="font-semibold hover:text-yellow-300 transition duration-300">💻 My Coding Proj</a>
+      <a href="#writeup" class="font-semibold hover:text-yellow-300 transition duration-300">🧠 Reflections</a>
     </div>
+  </div>
 </nav>
 
   <!-- Responsive Timeline Section -->
@@ -405,7 +407,6 @@
   </div>
 
   <script>
-    // Fade-in animation on scroll
     function onScroll() {
       document.querySelectorAll('.fade-in').forEach(el => {
         const rect = el.getBoundingClientRect();
