@@ -122,25 +122,24 @@
   </header>
 
   <!-- Navigation -->
-<nav class="bg-blue-800 sticky top-0 z-20 shadow-lg text-white font-[Poppins]">
-  <div class="max-w-7xl mx-auto px-4 py-3 relative overflow-hidden">
-    
-    <!-- Scroll shadow overlays (left/right fade) -->
-    <div class="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-blue-800 to-transparent sm:hidden"></div>
-    <div class="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-blue-800 to-transparent sm:hidden"></div>
+<!-- Navigation with scroll indicators -->
+<nav class="bg-blue-800 sticky top-0 z-20 shadow-lg text-white relative overflow-hidden" style="font-family: 'Poppins', sans-serif;">
+  <!-- Left gradient indicator -->
+  <div class="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-blue-800 via-blue-800/80 to-transparent pointer-events-none hidden sm:hidden z-10"></div>
+  <!-- Right gradient indicator -->
+  <div class="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-blue-800 via-blue-800/80 to-transparent pointer-events-none hidden sm:hidden z-10"></div>
 
-    <!-- Scrollable nav items -->
-    <div class="flex space-x-4 overflow-x-auto scrollbar-hide whitespace-nowrap justify-center lg:justify-center">
-      <a href="#about" class="font-semibold hover:text-yellow-300 transition duration-300">👋 About Me</a>
-      <a href="#via" class="font-semibold hover:text-yellow-300 transition duration-300">🤝 VIA Proj</a>
-      <a href="#cca" class="font-semibold hover:text-yellow-300 transition duration-300">🎭 CCA</a>
-      <a href="#leadership" class="font-semibold hover:text-yellow-300 transition duration-300">⭐ Leadership</a>
-      <a href="#testimonials" class="font-semibold hover:text-yellow-300 transition duration-300">💬 Testimonials</a>
-      <a href="#certificate" class="font-semibold hover:text-yellow-300 transition duration-300">🎓 Certificates</a>
-      <a href="#course-writeup" class="font-semibold hover:text-yellow-300 transition duration-300">📝 Course Write-Up</a>
-      <a href="#coding-project" class="font-semibold hover:text-yellow-300 transition duration-300">💻 My Coding Proj</a>
-      <a href="#writeup" class="font-semibold hover:text-yellow-300 transition duration-300">🧠 Reflections</a>
-    </div>
+  <!-- Scrollable Menu -->
+  <div class="max-w-full overflow-x-auto whitespace-nowrap scrollbar-hide px-4 py-3 flex space-x-3">
+    <a href="#about" class="font-semibold hover:text-yellow-300 transition duration-300">👋 About Me</a>
+    <a href="#via" class="font-semibold hover:text-yellow-300 transition duration-300">🤝 VIA Proj</a>
+    <a href="#cca" class="font-semibold hover:text-yellow-300 transition duration-300">🎭 CCA</a>
+    <a href="#leadership" class="font-semibold hover:text-yellow-300 transition duration-300">⭐ Leadership</a>
+    <a href="#testimonials" class="font-semibold hover:text-yellow-300 transition duration-300">💬 Testimonials</a>
+    <a href="#certificate" class="font-semibold hover:text-yellow-300 transition duration-300">🎓 Certificates</a>
+    <a href="#course-writeup" class="font-semibold hover:text-yellow-300 transition duration-300">📝 Course Write-Up</a>
+    <a href="#coding-project" class="font-semibold hover:text-yellow-300 transition duration-300">💻 My Coding Proj</a>
+    <a href="#writeup" class="font-semibold hover:text-yellow-300 transition duration-300">🧠 Reflections</a>
   </div>
 </nav>
 
